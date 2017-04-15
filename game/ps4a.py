@@ -7,6 +7,7 @@
 
 import random
 import string
+import os
 
 VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
@@ -20,7 +21,10 @@ SCRABBLE_LETTER_VALUES = {
 # Helper code
 # (you don't need to understand this helper code)
 
-WORDLIST_FILENAME = "C:/Users/Wei Cui/Downloads/6.00.1x Files/ProblemSet4/words.txt"
+dir = os.path.dirname(__file__)
+relFilename = os.path.join(dir, "words.txt")
+
+WORDLIST_FILENAME = relFilename
 
 def loadWords():
     """
